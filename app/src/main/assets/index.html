@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div id="container" >
+    <div class="head_text"><p class="head_text_p">Naruto Shipudden</p></div>
+    <div class="episodes_section">
+        <p class="current_ep">Current Episode:</p>
+        <p id="print_episode">342</p>
+    </div>
+    <div class="video_div ">
+        <video id="video_url" type="video/webm" src="https://cdn.asroll.tk/file/AS-Stream/AS+(1)/xsaNS/xsaNS+-+342.mp4" controls controlslist="nodownload" allowfullscreen></video>
+    </div>
+
+    <!--Commands buttons for video-->
+
+
+    <div class="commands ">
+        <div class="menu-commands">
+            <button id="btn1" class="cmd_btn cmd_btn-left" onclick="volumeDown()">-</button>
+            <button id="btn2" type="button" class="cmd_btn cmd_btn-middle" onclick="playVideo()">Play</button>
+            <button id="btn3" class="cmd_btn cmd_btn-right" onclick="volumeUp()">+</button>
+        </div>
+        <div class="commands_header">
+            <p class="commands_p">Enter number of episode:</p>
+        </div>
+    </div>
+
+    <!--NAVBAR-->
+    <div class="navbar">
+        <hr />
+        <div class="navbar-div ">
+            <button class="link " onclick="lastOne()"><</button>
+        </div>
+        <div class="navbar-div_input ">
+            <input id="inputForEpisode" class="number_episode " type="number" required min="0" max="500">
+        </div>
+        <div class="navbar-div right_btn">
+            <button class="link " onclick="nextOne()">></button>
+        </div>
+        <hr/>
+    </div>
+
+    <div id="ForFindEpisode">
+        <button type="submit" class="search_episode" onclick="findEpisode()">Find episode</button>
+    </div>
+
+
+</div>
+
+<div id="container2" class="removeAllBTN" style="margin-top:20px; text-align:center">
+    <p id="removeChangeText" onclick="hideAll()">Minimize All</p>
+</div>
+
+
+<script src="./main.js"></script>
+
+</body>
+</html>
